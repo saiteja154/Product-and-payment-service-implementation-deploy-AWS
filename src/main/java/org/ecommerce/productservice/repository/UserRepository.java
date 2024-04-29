@@ -13,7 +13,7 @@ public interface UserRepository extends JpaRepository<User,Long> {
 
     Optional<User> findByEmail(String email);
 
-    Optional<User> findByName(String name);
+    List<User> findByName(String name);
     List<User> findAllByNameEndingWith(String suffix);
 
     @Override
