@@ -6,11 +6,15 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.UUID;
-
+//@Entity(name = "user")
+// inheritance types in hibernate : Mappedsuperclass, single table , Joined table , table per class.
 //@MappedSuperclass
-@Entity(name = "user")
+//@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+
 @Getter
 @Setter
+@Entity()
+@Inheritance(strategy = InheritanceType.JOINED)
 public class User {
     @Id
     @GeneratedValue()

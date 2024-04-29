@@ -18,6 +18,5 @@ public class Batch {
     private Integer strength;
 
     @ManyToOne()
-    @JoinColumn(name = "instructor_id")
     private Instructor instructor;
 }
